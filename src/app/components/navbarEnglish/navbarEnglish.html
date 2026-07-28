@@ -1,0 +1,55 @@
+<nav class="navbar">
+
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a href="#inicio" class="logo" (click)="closeMenu()">
+      Diego
+    </a>
+
+
+    <!-- Botón móvil -->
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Abrir menú"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <!-- Navegación -->
+    <div
+      class="nav-links"
+      [class.open]="menuOpen"
+    >
+
+      <a href="/Portfolio/#home" (click)="closeMenu()">
+        Home
+      </a>
+
+      <a href="/Portfolio/#about-me" (click)="closeMenu()">
+        About me
+      </a>
+
+      <a href="/Portfolio/#projects" (click)="closeMenu()">
+        Projects
+      </a>
+
+      <a href="/Portfolio/#contact" (click)="closeMenu()">
+        Contact
+      </a>
+
+      <a href="/Portafolio" (click)="closeMenu()">
+        🇲🇽
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>

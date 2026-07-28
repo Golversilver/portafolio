@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-primary: #0d1b25;
+  --bg-secondary: #122531;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #aeb8bf;
+
+  --accent: #ff6b5a;
+  --accent-dark: #d95749;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: Arial, sans-serif;
+}

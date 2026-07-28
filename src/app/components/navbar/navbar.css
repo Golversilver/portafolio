@@ -1,0 +1,251 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: #0d1b25;
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.navbar-container {
+  max-width: 1200px;
+
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+
+/* Línea debajo */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--accent);
+
+  border-radius: 2px;
+
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background: white;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================
+   TABLET / MÓVIL
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    height: 65px;
+
+    padding: 0 20px;
+  }
+
+
+  /* Mostrar hamburguesa */
+
+  .menu-toggle {
+    display: flex;
+  }
+
+
+  /* Menú */
+
+  .nav-links {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px 20px 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    background: #0d1b25;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* Cerrado */   
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+
+  /* Menú abierto */
+
+  .nav-links.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* Links móviles */
+
+  .nav-links a {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 5px;
+
+    font-size: 1rem;
+  }
+
+
+  /* Quitamos la línea de escritorio */
+
+  .nav-links a::after {
+    display: none;
+  }
+
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+}
