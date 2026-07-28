@@ -208,6 +208,7 @@
 }
 
 
+
 /* =========================================================
    TECNOLOGÍAS
 ========================================================= */
@@ -216,7 +217,7 @@
   width: 100%;
   min-height: 70px;
 
-  padding: 0 px;
+  padding: 0px;
 
   display: flex;
   align-items: center;
@@ -1263,5 +1264,170 @@
 
     padding: 25px;
   }
+
+
+  /* =========================
+   RESPONSIVE GENERAL
+========================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+
+  .hero {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 100px 20px 50px;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+
+  .intro {
+    padding-left: 0;
+    font-size: 1.4rem;
+  }
+
+
+  /* Quitamos la línea que sale hacia la izquierda */
+
+  .intro::before {
+    display: none;
+  }
+
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+
+  .description {
+    max-width: 100%;
+  }
+
+
+  /* BOTONES */
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+
+  /* FOTO */
+
+  .hero-visual {
+    width: 100%;
+    min-height: 400px;
+
+    overflow: hidden;
+  }
+
+
+  .hero-photo {
+    width: min(100%, 400px);
+    height: auto;
+    max-height: 430px;
+
+    object-fit: contain;
+  }
+
+
+  /* CÍRCULO */
+
+  .circle {
+    width: 280px;
+    height: 280px;
+  }
+
+
+  /* TECNOLOGÍAS */
+
+  .technologies {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    flex-wrap: nowrap;
+
+    gap: 30px;
+
+    scrollbar-width: none;
+  }
+
+  .technologies::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* PERFIL */
+
+  .profile-section,
+  .about-section,
+  .experience-section,
+  .projects-section,
+  .contact-section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* PROYECTOS */
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* EXPERIENCIA */
+
+  .experience-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CONTACTO */
+
+  .contact-links {
+    width: 100%;
+  }
+
+  .contact-link {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
 
 }
